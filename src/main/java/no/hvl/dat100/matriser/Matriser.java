@@ -55,33 +55,4 @@ public class Matriser {
 		}
 		return true;
 	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
-		int[][]speilMatrise = new int[matrise.length][matrise[0].length];
-		for (int a = 0; a < matrise.length; a++) {
-			for (int b = 0; b < matrise[a].length; b++) {
-				speilMatrise[a][b] = matrise[b][a];
-			}
-		}
-		return speilMatrise;
-	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-		int aRekke = a.length;
-		int felles = a[0].length;
-		int bRekke = b.length;
-		
-		int[][] multiMatris = new int [aRekke][bRekke];
-		
-		for (int f = 0; f < aRekke; f++) {
-			for (int s = 0; s < bRekke; s++) {
-				for (int t = 0; t < felles; t++) {
-					multiMatris[f][s] += (a[f][t]*b[t][s]);
-				}
-			}
-		}
-		return multiMatris;
-	}
 }
